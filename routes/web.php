@@ -1,20 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AlunoController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/bem-vindo', function () {
-    return view('bem-vindo');
-});
 
-Route::get('/hello-world', function () {
-    return view('helloWorld');
-});
 
-Route::get('/apresentacao/{$id}', function ($id) {
+Route::get('/passagem-de-parametro/{id}', function ($id) {
     return $id;
 });
 
+
+Route::get('/novo-arquivo', [AlunoController::class, 'index']);
