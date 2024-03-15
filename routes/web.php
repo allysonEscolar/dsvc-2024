@@ -14,7 +14,7 @@ Route::get('/hello-world', function () {
     return view('helloWorld');
 });
 
-// Route::get('/apresentacao/{$id}', function ($id) {
-//     return $id;
-// });
+Route::get('/apresentacao/{$id}', function ($id) {
+    return $id;
+});
 
