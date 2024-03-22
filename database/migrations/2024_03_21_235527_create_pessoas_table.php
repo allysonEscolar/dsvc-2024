@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('teste', function (Blueprint $table) {
+        Schema::create('pessoas', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->string('cpf',11)->nullabe()->unique();
-            $table->decimal('peso')->nullable();
-            $table->date('data_nascimento')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('teste');
+        Schema::dropIfExists('pessoas');
     }
 };
