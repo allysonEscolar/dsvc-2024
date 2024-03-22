@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('teste', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->string('cpf',11)->nullabe()->unique();
+            $table->string('cpf')->nullable()->unique();
             $table->decimal('peso')->nullable();
             $table->date('data_nascimento')->nullable();
             $table->timestamps();

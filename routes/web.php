@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AlunoController;
+use App\Http\Controllers\TesteController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,4 +14,4 @@ Route::get('/passagem-de-parametro/{id}', function ($id) {
 });
 
 
-Route::get('/novo-arquivo', [AlunoController::class, 'index']);
+Route::get('/teste', [TesteController::class, 'index']);
